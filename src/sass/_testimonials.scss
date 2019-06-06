@@ -1,0 +1,78 @@
+.testimonials {
+  background-color: #f8f7f7;
+  padding-top: 75px;
+  padding-bottom: 75px;
+  &__head {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 0;
+  }
+  &__inner {
+    grid-template-columns: 30% 30% 30%;
+    grid-gap: 4%;
+    display: grid;
+    .card {
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+      position: relative;
+      background: $white;
+      margin-bottom: 35px;
+      &::after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 29px 10px 0 40px;
+        border-color: $white transparent transparent transparent;
+        line-height: 0px;
+        position: absolute;
+        bottom: -23px;
+        -webkit-filter: drop-shadow(-1px 8px 3px rgba(0, 0, 0, 0.15));
+        filter: drop-shadow(-1px 8px 3px rgba(0, 0, 0, 0.15));
+        left: 25px;
+      }
+      .card__title {
+        font-size: 21px;
+        font-weight: normal;
+        color: #817370;
+        margin: 0;
+        position: relative;
+        i {
+          background-image: url('./images/left-quotes.png');
+          background-repeat: no-repeat;
+          background-position: left top;
+          width: 25px;
+          height: 20px;
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+      }
+    }
+    .author {
+      img {
+        float: left;
+        margin-right: 15px;
+      }
+      .testimonial-user {
+        float: left;
+        margin: 0;
+        padding-top: 10px;
+        font-size: 19px;
+        .user-position {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet-max-width) {
+  .testimonials__inner {
+    grid-template-columns: 100%;
+  }
+}

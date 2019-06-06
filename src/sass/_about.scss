@@ -1,0 +1,25 @@
+.about {
+  $about: &;
+  &__inner {
+    display: flex;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    #{$about}__cont {
+      flex-basis: 50%;
+    }
+    #{$about}__head {
+      font-size: 30px;
+      font-weight: normal;
+    }
+    #{$about}__subtext {
+      font-size: 19px;
+      line-height: 28px;
+    }
+  }
+}
+
+@media (max-width: $tablet-max-width) {
+  .about__inner {
+    display: block;
+  }
+}

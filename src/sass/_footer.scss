@@ -1,0 +1,31 @@
+.footer {
+  background-image: url('./images/nav-bg.png');
+  background-repeat: repeat-x;
+  background-size: cover;
+  padding: 30px 0;
+  font-size: 16px;
+  color: #AFA5A3;
+  .list__inline {
+    margin: 0;
+    padding: 0;
+    .list__item {
+      display: inline;
+      a {
+        color: #AFA5A3;
+        padding-left: 5px;
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet-max-width) {
+  .footer {
+    text-align: center;
+    .flex-container{
+      display: block;
+      div {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
