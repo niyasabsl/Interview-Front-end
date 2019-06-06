@@ -43,10 +43,6 @@ gulp.task('images', () => {
   return gulp.src('src/images/*').pipe(gulp.dest('dist/images'));
 });
 
-gulp.task('fonts', () => {
-  return gulp.src('src/fonts/*').pipe(gulp.dest('dist/fonts'));
-});
-
 gulp.task('babel', () => {
   return gulp
     .src('src/js/*.js')
@@ -74,7 +70,7 @@ gulp.task('browsersync', () => {
 });
 
 gulp.task('lint', gulp.parallel('stylelint', 'eslint'));
-gulp.task('build', gulp.parallel('twig', 'sass', 'babel', 'fonts', 'images'));
+gulp.task('build', gulp.parallel('twig', 'sass', 'babel', 'images'));
 gulp.task('server', gulp.series('build', gulp.parallel('browsersync')));
 
 gulp.task('default', gulp.series('lint', 'build'));
